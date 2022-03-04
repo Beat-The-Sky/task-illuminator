@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="jquery-ui.min.css">
+  <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="jquery-ui.min.js"></script>
+  <title>Task Iluminator</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header__logo" href="#"><img src="Volkswagen_logo_2019.svg" alt="VW"></a>
+      <div class="search-form">
+        <input type="text" class="search-form__input" id="nameSur">
+        <button class="search-form__button">Поиск</button>
+      </div>
+      <a class="header__tel" href="tel:+7-800-999-99-99">+7-800-999-99-99</a>
+      <a class="header__button-callback" href="#">Обратный звонок</a>
+      <nav class="header__nav-menu">
+        <a href="#">Главная</a>
+        <a href="#">Контакты</a>
+        <a href="#">О нас</a>
+      </nav>
+    </header>
+  </div>
+  <script>
+
+    $(function () {
+      var nameSurname = [
+        'Маргарита Лосева',
+        'Елизавета Касаткина',
+        'Ксения Кириллова',
+        'Фёдор Антонов',
+        'Дмитрий Левин',
+        'Мия Волкова',
+        'Родион Барсуков',
+        'Маргарита Полякова',
+        'Фёдор Шестаков',
+        'Василиса Егорова'
+      ];
+      $("#nameSur").autocomplete({
+        source: nameSurname
+      });
+    });
+
+  </script>
+</body>
+
+</html>
